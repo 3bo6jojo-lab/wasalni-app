@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>وصلني — توصيل الطلبات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="location-pill" id="locationBtn">
+        <span class="location-icon">⌖</span>
+        <span><small>التوصيل إلى</small><strong>الرياض، حي العليا <b>⌄</b></strong></span>
+      </button>
+      <div class="brand-mark">وصلني</div>
+      <button class="icon-btn notification-btn" aria-label="الإشعارات">♢<span class="badge-dot"></span></button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="search-row">
+          <label class="search-box">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="ابحث عن مطعم أو وجبة" />
+          </label>
+          <button class="filter-btn" id="filterBtn" aria-label="الفلاتر">☷<i></i></button>
+        </div>
+
+        <div class="categories" id="categories">
+          <button class="category active" data-category="الكل"><span>✦</span><b>الكل</b></button>
+          <button class="category" data-category="عروض"><span>٪</span><b>عروض</b></button>
+          <button class="category" data-category="برجر"><span>🍔</span><b>برجر</b></button>
+          <button class="category" data-category="بيتزا"><span>🍕</span><b>بيتزا</b></button>
+          <button class="category" data-category="حلويات"><span>🍰</span><b>حلويات</b></button>
+          <button class="category" data-category="قهوة"><span>☕</span><b>قهوة</b></button>
+        </div>
+
+        <article class="promo-card">
+          <div class="promo-copy">
+            <small>عرض حصري</small>
+            <h2>خصم 40٪<br><span>على طلبك الأول</span></h2>
+            <button>اطلب الآن ←</button>
+          </div>
+          <div class="promo-bowl">
+            <div class="bowl"><i>🥗</i></div>
+          </div>
+        </article>
+
+        <div class="action-grid">
+          <button class="action-card request-card" id="requestBtn">
+            <span class="action-icon">＋</span>
+            <span><b>اطلب أي حاجة</b><small>طلب حر لأي صنف أو مطعم</small></span>
+            <i>‹</i>
+          </button>
+          <button class="action-card code-card">
+            <span class="action-icon gift">🎁</span>
+            <span><b>Got a code?</b><small>Add your code and save</small></span>
+            <i>‹</i>
+          </button>
+        </div>
+
+        <div class="section-heading"><h3>مطاعم بالقرب منك</h3><button>عرض الكل</button></div>
+        <div class="restaurants" id="restaurants">
+          <article class="restaurant-card" data-name="ذا برجر كوتشر">
+            <div class="restaurant-image burger"><span class="discount">خصم 30٪</span><button class="heart">♡</button></div>
+            <div class="restaurant-info"><div><h4>ذا برجر كوتشر</h4><span>★ 4.9</span></div><p>برجر • أمريكي • 30–40 دقيقة <b>﷼ 8 توصيل</b></p></div>
+          </article>
+          <article class="restaurant-card" data-name="بيتزا هانا">
+            <div class="restaurant-image pizza"><span class="discount">خصم 25٪</span><button class="heart">♡</button></div>
+            <div class="restaurant-info"><div><h4>بيتزا هانا</h4><span>★ 4.7</span></div><p>بيتزا • إيطالي • 20–30 دقيقة <b>توصيل مجاني</b></p></div>
+          </article>
+          <article class="restaurant-card" data-name="كافيه ليل">
+            <div class="restaurant-image coffee"><span class="discount">خصم 20٪</span><button class="heart">♡</button></div>
+            <div class="restaurant-info"><div><h4>كافيه ليل</h4><span>★ 4.8</span></div><p>قهوة • حلويات • 15–25 دقيقة <b>﷼ 5 توصيل</b></p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-view hidden" id="ordersPage">
+        <div class="page-header"><button class="back-btn" data-back>‹</button><h2>طلباتي</h2><button class="icon-btn">•••</button></div>
+        <div class="order-tabs"><button class="active">الحالية</button><button>السابقة</button></div>
+        <div class="active-order">
+          <div class="order-status"><div class="live-dot"></div><div><b>طلبك في الطريق</b><small>موصل الطلب تقريبًا خلال 12 دقيقة</small></div><strong>#W 2481</strong></div>
+          <div class="map-preview"><div class="road r1"></div><div class="road r2"></div><div class="pin home-pin">⌂</div><div class="pin rider-pin">🛵</div><div class="route-line"></div></div>
+          <div class="rider-row"><span class="rider-avatar">م</span><div><b>محمد — مندوب توصيل</b><small>دراجة • 4.9 ★</small></div><button>☎</button><button>●</button></div>
+        </div>
+        <div class="section-heading"><h3>الطلبات السابقة</h3><button>عرض الكل</button></div>
+        <div class="past-orders">
+          <article><div class="past-icon">🍔</div><div><b>ذا برجر كوتشر</b><small>2 برجر مزدوج • 14 أكتوبر 2026</small></div><strong>﷼ 86</strong><button>طلب مرة أخرى</button></article>
+          <article><div class="past-icon">🍕</div><div><b>بيتزا هانا</b><small>بيتزا بيبروني • 30 سبتمبر 2026</small></div><strong>﷼ 64</strong><button>طلب مرة أخرى</button></article>
+        </div>
+      </section>
+
+      <section class="page-view hidden" id="accountPage">
+        <div class="account-head"><div class="profile-avatar">A</div><div><small>مرحبًا بك</small><h2>أحمد العبدالله</h2></div><button class="gear">⚙</button></div>
+        <div class="reward-strip"><div><small>نقاط المكافآت</small><strong>1,240</strong></div><div class="points-ring">68٪</div></div>
+        <div class="account-card">
+          <button><span class="menu-icon">♙</span><span><b>معلومات الحساب</b><small>الاسم، البريد، رقم الجوال</small></span><i>‹</i></button>
+          <button><span class="menu-icon">⌖</span><span><b>العناوين المحفوظة</b><small>إدارة عناوين التوصيل</small></span><i>‹</i></button>
+          <button><span class="menu-icon">♢</span><span><b>الإشعارات</b><small>العروض وتحديثات الطلبات</small></span><i>‹</i></button>
+          <button id="languageBtn"><span class="menu-icon">◉</span><span><b>اللغة</b><small>العربية</small></span><i>‹</i></button>
+        </div>
+        <div class="account-grid">
+          <button><span>🎁</span><b>المكافآت</b></button><button><span>🧾</span><b>طلباتي</b></button><button><span>👥</span><b>ادعُ صديقًا</b></button><button><span>🎟️</span><b>قسائم الخصم</b></button>
+        </div>
+        <div class="account-card support-card">
+          <button><span class="menu-icon">🎧</span><span><b>احصل على المساعدة</b><small>الدعم الفني والتواصل</small></span><i>‹</i></button>
+          <button><span class="menu-icon">ⓘ</span><span><b>حول التطبيق</b><small>الإصدار 2.4.1</small></span><i>‹</i></button>
+          <button><span class="menu-icon">🤝</span><span><b>سجل كشريك</b><small>مطعم أو مندوب</small></span><i>‹</i></button>
+        </div>
+        <button class="logout-btn">تسجيل الخروج</button>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-page="home"><span>⌂</span><b>الرئيسية</b></button>
+      <button class="nav-item order-nav" data-page="orders"><span class="order-bubble">🧾</span><b>الطلبات</b><i></i></button>
+      <button class="nav-item" data-page="account"><span>♙</span><b>حسابي</b></button>
+    </nav>
+  </div>
+
+  <div class="sheet-backdrop" id="sheetBackdrop"></div>
+  <aside class="bottom-sheet" id="filterSheet">
+    <div class="sheet-handle"></div><div class="sheet-title"><h3>تصفية المطاعم</h3><button class="sheet-close">×</button></div>
+    <label>نطاق السعر</label><div class="price-options"><button>﷼</button><button class="active">﷼﷼</button><button>﷼﷼﷼</button></div>
+    <label>التقييم</label><div class="rating-options"><button>4.5+</button><button class="active">4.0+</button><button>الكل</button></div>
+    <label>المسافة القصوى</label><input class="range" type="range" min="1" max="20" value="8"><div class="range-label"><span>1 كم</span><strong>8 كم</strong><span>20 كم</span></div>
+    <button class="apply-btn">عرض النتائج</button>
+  </aside>
+
+  <aside class="bottom-sheet" id="languageSheet">
+    <div class="sheet-handle"></div><div class="sheet-title"><h3>اختر اللغة</h3><button class="sheet-close">×</button></div>
+    <div class="language-list"><button class="active"><span>🇸🇦</span><b>العربية</b><i>✓</i></button><button><span>🇬🇧</span><b>English</b><i></i></button><button><span>🇪🇸</span><b>Español</b><i></i></button><button><span>🇫🇷</span><b>Français</b><i></i></button><button><span>🇩🇪</span><b>Deutsch</b><i></i></button><button><span>🇷🇺</span><b>Русский</b><i></i></button></div>
+  </aside>
+
+  <div class="toast" id="toast">تم إضافة الطلب للسلة</div>
+  <script src="script.js"></script>
+</body>
+</html>
