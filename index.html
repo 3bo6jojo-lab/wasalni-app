@@ -14,7 +14,7 @@
     <header class="topbar">
       <button class="location-pill" id="locationBtn">
         <span class="location-icon">⌖</span>
-        <span><small>التوصيل إلى</small><strong>الرياض، حي العليا <b>⌄</b></strong></span>
+        <span><small>التوصيل إلى</small><strong>القاهرة، التجمع الخامس <b>⌄</b></strong></span>
       </button>
       <div class="brand-mark">وصلني</div>
       <button class="icon-btn notification-btn" aria-label="الإشعارات">♢<span class="badge-dot"></span></button>
@@ -37,6 +37,8 @@
           <button class="category" data-category="بيتزا"><span>🍕</span><b>بيتزا</b></button>
           <button class="category" data-category="حلويات"><span>🍰</span><b>حلويات</b></button>
           <button class="category" data-category="قهوة"><span>☕</span><b>قهوة</b></button>
+          <button class="category" data-category="بقالات"><span>🛒</span><b>بقالات</b></button>
+          <button class="category" data-category="صيدليات"><span>⚕</span><b>صيدليات</b></button>
         </div>
 
         <article class="promo-card">
@@ -67,7 +69,7 @@
         <div class="restaurants" id="restaurants">
           <article class="restaurant-card" data-name="ذا برجر كوتشر">
             <div class="restaurant-image burger"><span class="discount">خصم 30٪</span><button class="heart">♡</button></div>
-            <div class="restaurant-info"><div><h4>ذا برجر كوتشر</h4><span>★ 4.9</span></div><p>برجر • أمريكي • 30–40 دقيقة <b>﷼ 8 توصيل</b></p></div>
+            <div class="restaurant-info"><div><h4>ذا برجر كوتشر</h4><span>★ 4.9</span></div><p>برجر • أمريكي • 30–40 دقيقة <b>45 ج توصيل</b></p></div>
           </article>
           <article class="restaurant-card" data-name="بيتزا هانا">
             <div class="restaurant-image pizza"><span class="discount">خصم 25٪</span><button class="heart">♡</button></div>
@@ -75,7 +77,7 @@
           </article>
           <article class="restaurant-card" data-name="كافيه ليل">
             <div class="restaurant-image coffee"><span class="discount">خصم 20٪</span><button class="heart">♡</button></div>
-            <div class="restaurant-info"><div><h4>كافيه ليل</h4><span>★ 4.8</span></div><p>قهوة • حلويات • 15–25 دقيقة <b>﷼ 5 توصيل</b></p></div>
+            <div class="restaurant-info"><div><h4>كافيه ليل</h4><span>★ 4.8</span></div><p>قهوة • حلويات • 15–25 دقيقة <b>30 ج توصيل</b></p></div>
           </article>
         </div>
       </section>
@@ -90,8 +92,8 @@
         </div>
         <div class="section-heading"><h3>الطلبات السابقة</h3><button>عرض الكل</button></div>
         <div class="past-orders">
-          <article><div class="past-icon">🍔</div><div><b>ذا برجر كوتشر</b><small>2 برجر مزدوج • 14 أكتوبر 2026</small></div><strong>﷼ 86</strong><button>طلب مرة أخرى</button></article>
-          <article><div class="past-icon">🍕</div><div><b>بيتزا هانا</b><small>بيتزا بيبروني • 30 سبتمبر 2026</small></div><strong>﷼ 64</strong><button>طلب مرة أخرى</button></article>
+          <article><div class="past-icon">🍔</div><div><b>ذا برجر كوتشر</b><small>2 برجر مزدوج • 14 أكتوبر 2026</small></div><strong>380 ج</strong><button>طلب مرة أخرى</button></article>
+          <article><div class="past-icon">🍕</div><div><b>بيتزا هانا</b><small>بيتزا بيبروني • 30 سبتمبر 2026</small></div><strong>290 ج</strong><button>طلب مرة أخرى</button></article>
         </div>
       </section>
 
@@ -126,7 +128,7 @@
   <div class="sheet-backdrop" id="sheetBackdrop"></div>
   <aside class="bottom-sheet" id="filterSheet">
     <div class="sheet-handle"></div><div class="sheet-title"><h3>تصفية المطاعم</h3><button class="sheet-close">×</button></div>
-    <label>نطاق السعر</label><div class="price-options"><button>﷼</button><button class="active">﷼﷼</button><button>﷼﷼﷼</button></div>
+    <label>نطاق السعر</label><div class="price-options"><button>ج</button><button class="active">جج</button><button>ججج</button></div>
     <label>التقييم</label><div class="rating-options"><button>4.5+</button><button class="active">4.0+</button><button>الكل</button></div>
     <label>المسافة القصوى</label><input class="range" type="range" min="1" max="20" value="8"><div class="range-label"><span>1 كم</span><strong>8 كم</strong><span>20 كم</span></div>
     <button class="apply-btn">عرض النتائج</button>
